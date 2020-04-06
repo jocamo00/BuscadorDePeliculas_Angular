@@ -7,7 +7,7 @@ import { FavoriteComponent } from './pages/favorite/favorite.component';
 const routes: Routes = [
   { path: 'home', component: MainComponent},
   { path: 'favorite', component: FavoriteComponent},
-  { path: '**', pathMatch: 'full', redirectTo: '' }
+  { path: '**', pathMatch: 'full', redirectTo: 'home' }
 ];
 
 @NgModule({
