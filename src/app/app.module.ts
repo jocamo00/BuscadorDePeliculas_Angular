@@ -7,6 +7,7 @@ import { HeaderComponent } from './shared/header/header.component';
 import { SearchComponent } from './components/search/search.component';
 import { MainComponent } from './pages/main/main.component';
 import { ReturnComponent } from './components/return/return.component';
+import { FavoriteComponent } from './pages/favorite/favorite.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { ReturnComponent } from './components/return/return.component';
     HeaderComponent,
     SearchComponent,
     MainComponent,
-    ReturnComponent
+    ReturnComponent,
+    FavoriteComponent
   ],
   imports: [
     BrowserModule,
