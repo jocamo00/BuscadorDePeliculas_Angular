@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { InfoPeliculasService } from 'src/app/services/info-peliculas.service';
 
 @Component({
   selector: 'app-favorite',
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FavoriteComponent implements OnInit {
 
-  constructor() { }
+  constructor( public infoPeliculasService: InfoPeliculasService ) { }
 
   ngOnInit(): void {
   }
