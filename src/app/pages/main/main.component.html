@@ -3,13 +3,12 @@
 <!-- Contenido peliculas -->
 <div class="container-fluid">
   <div class="row" id="contenido">
-    <div class="col-md-12 col-lg-12 col-xl-6">
+    <div *ngFor="let peliNombre of infoPeliculasService.pelisNombre"  class="col-md-12 col-lg-12 col-xl-6">
       <div class="contenido-card">
-        <img value="${pelicula[i].id}" id="btn-trailer${[i]}" src="${rutaImg}${pelicula[i].poster_path}" alt="..."
-          onclick="trailer()" data-toggle="modal" data-target="#myModal">
+        <img [src]="'https://image.tmdb.org/t/p/w300_and_h450_bestv2/'+ peliNombre.poster_path" alt="...">
         <div class="info-card col-sm-12 col-md-7 col-lg-7">
-          <p class="card-title title-card"></p>
-          <p class="card-text description-card"></p>
+          <p class="card-title title-card"> {{ peliNombre.title }} </p>
+          <p class="card-text description-card"> {{ peliNombre.overview }} </p>
         </div>
       </div>
     </div>

@@ -1,16 +1,12 @@
+<!-- Flecha de regreso -->
 <app-return></app-return>
-
-<!--<div *ngFor="let peliFavorite of infoPeliculasService.pelisFavorites">
-  <p>{{ peliFavorite.title }}</p>
-</div>-->
-
 
 <!-- Contenido peliculas -->
 <div class="container-fluid">
   <div class="row" id="favorite">
     <div *ngFor="let peliFavorite of infoPeliculasService.pelisFavorites"  class="col-md-12 col-lg-12 col-xl-6">
       <div class="contenido-card">
-        <img src="https://image.tmdb.org/t/p/w300_and_h450_bestv2//xBHvZcjRiWyobQ9kxBhO6B2dtRI.jpg" alt="...">
+        <img [src]="'https://image.tmdb.org/t/p/w300_and_h450_bestv2/'+ peliFavorite.poster_path" alt="...">
         <div class="info-card col-sm-12 col-md-7 col-lg-7">
           <p class="card-title title-card"> {{ peliFavorite.title }} </p>
           <p class="card-text description-card"> {{ peliFavorite.overview }} </p>
