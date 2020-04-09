@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { InfoPeliculasService } from 'src/app/services/info-peliculas.service';
 
 @Component({
   selector: 'app-search',
@@ -7,9 +8,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SearchComponent implements OnInit {
 
-  constructor() { }
+  @Output() cambio = new EventEmitter();
+
+  constructor( private infoPeliculasService: InfoPeliculasService ) { }
 
   ngOnInit(): void {
+  }
+
+
+  buscarPelicula( peliSearch ) {
+    // console.log(peliSearch);
+    this.cambio.emit(peliSearch);
+    // console.log('cambio' + this.cambio);
   }
 
 }

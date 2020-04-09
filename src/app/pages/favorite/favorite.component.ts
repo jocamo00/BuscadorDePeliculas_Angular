@@ -8,9 +8,20 @@ import { InfoPeliculasService } from 'src/app/services/info-peliculas.service';
 })
 export class FavoriteComponent implements OnInit {
 
+  pelisFavorites: any;
+
   constructor( public infoPeliculasService: InfoPeliculasService ) { }
 
   ngOnInit(): void {
+    this.fetchPeliculasFavorite();
+  }
+
+
+  fetchPeliculasFavorite(): void {
+    this.infoPeliculasService.cargarInfoPeliculasFavorites().subscribe((pelis: any) => {
+      console.log(pelis);
+      this.pelisFavorites = pelis.results;
+    });
   }
 
 }

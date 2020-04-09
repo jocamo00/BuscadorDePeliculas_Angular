@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { InfoPeliculasService } from 'src/app/services/info-peliculas.service';
 
 @Component({
@@ -8,9 +8,24 @@ import { InfoPeliculasService } from 'src/app/services/info-peliculas.service';
 })
 export class MainComponent implements OnInit {
 
+  pelisNombre: any;
+
+  // peli = 'avengers';
+  peli;
+
   constructor(public infoPeliculasService: InfoPeliculasService ) { }
 
-  ngOnInit(): void {
+  ngOnInit(): void{
+    this.fetchPeliculasNombre(this.peli);
+  }
+
+
+  fetchPeliculasNombre(e) {
+    this.peli = e;
+    this.infoPeliculasService.cargarInfoPeliculasNombre(this.peli).subscribe((pelis: any) => {
+      console.log(pelis);
+      this.pelisNombre = pelis.results;
+    });
   }
 
 }
