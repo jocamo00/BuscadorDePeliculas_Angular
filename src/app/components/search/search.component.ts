@@ -16,10 +16,9 @@ export class SearchComponent implements OnInit {
   }
 
 
-  buscarPelicula( peliSearch ) {
+  buscarPelicula( peliSearch: string ) {
     // console.log(peliSearch);
     this.cambio.emit(peliSearch);
-    // console.log('cambio' + this.cambio);
   }
 
 }

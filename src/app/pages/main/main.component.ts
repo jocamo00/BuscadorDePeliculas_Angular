@@ -8,10 +8,10 @@ import { InfoPeliculasService } from 'src/app/services/info-peliculas.service';
 })
 export class MainComponent implements OnInit {
 
-  pelisNombre: any;
+  pelisNombre: string;
 
   // peli = 'avengers';
-  peli;
+  peli = '';
 
   constructor(public infoPeliculasService: InfoPeliculasService ) { }
 
