@@ -1,0 +1,19 @@
+<!-- Barra buscador -->
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-2 col-lg-2 barraNav"></div>
+    <div class="col-md-8 col-lg-8 pmDelete barraNav">
+      <nav class="navbar barraNavSearch">
+        <a routerLink="/favorite"><button class="btnFavoritas">⭐️ Favorite</button></a>
+        <div class="form-inline barraNavSearch">
+          <input id="input-search" class="form-control" type="text" (keyup)="buscarPelicula( txtBuscar.value)" #txtBuscar placeholder="Search for a movie">
+          <button id="btnSearch" class="btn btnSearch" (click)="buscarPelicula( txtBuscar.value)" #txtBuscar>Search</button>
+        </div>
+      </nav>
+    </div>
+    <div class="col-md-2 col-lg-2 barraNav"></div>
+  </div>
+</div>
+<!-- Fin Barra buscador -->
+
+

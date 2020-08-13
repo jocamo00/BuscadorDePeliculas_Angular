@@ -1,0 +1,20 @@
+<app-search (cambio)="fetchPeliculasNombre($event)"></app-search>
+
+<!-- Contenido peliculas -->
+<div class="container-fluid">
+  <div class="row" id="contenido">
+    <div *ngFor="let peliNombre of pelisNombre"  class="col-md-12 col-lg-12 col-xl-6">
+      <div class="contenido-card">
+        <img [src]="'https://image.tmdb.org/t/p/w300_and_h450_bestv2/'+ peliNombre.poster_path" alt="...">
+        <div class="info-card col-sm-12 col-md-7 col-lg-7">
+          <p class="card-title title-card"> {{ peliNombre.title }} </p>
+          <p class="card-text description-card"> {{ peliNombre.overview }} </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Fin contenido peliculas -->
+
+
+
