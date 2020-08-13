@@ -1,4 +1,4 @@
-# GeeksHubs-Proyecto-Red-Social-Frontend
+# GeeksHubs-Proyecto-Consumo-de-API-Externa-con-Angular
 
 _Web que consume de la API themoviedb, donde se pueden filtrar peliculas por titulo, también esta la opción de filtrar las peliculas más populares.
 
