@@ -39,6 +39,9 @@ $ ng serve
 Las instrucciones sobre cómo usarlas en su propia aplicación están vinculadas a continuación.
 GitHub  [plugins/github/README.md][PlGh] 
 
+## Video
+(https://www.youtube.com/watch?v=p8mYlQsZMdk)
+
 ## Imagenes
 
 ![Screenshot](01.png)
